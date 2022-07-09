@@ -1,0 +1,95 @@
+.node {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid rgb(175, 216, 248);
+  display: inline-block;
+}
+
+.node__start {
+  background-image: url('../../assets/play-button.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.node__finish {
+  background-image: url('../../assets/racing-flag.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.node__on_drag_over {
+  outline: 1px dashed red;
+}
+
+.node__visited {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  background-color: aqua;
+}
+
+@keyframes visitedAnimation {
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+.node__currently__visited {
+  background-color: rgb(43, 255, 0);
+}
+
+.node__wall {
+  animation-name: wallBuildAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  background-color: black;
+}
+
+@keyframes wallBuildAnimation {
+  0% {
+    transform: scale(0.5);
+    background-color: black;
+  }
+
+  50% {
+    transform: scale(1.5);
+    background-color: black;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: black;
+  }
+}
+
+
+.node__shortest__path {
+  animation-name: shortestPath;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  background-color: yellow;
+  background-image: url('../../assets/blur.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.5);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.5);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}

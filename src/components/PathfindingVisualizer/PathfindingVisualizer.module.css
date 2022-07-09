@@ -1,0 +1,13 @@
+.pathfinding__container {
+    display: grid;
+    grid-template-rows: 2fr;
+}
+
+.pathfinding__container__grid__container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    margin: 100px 0 0;
+}
